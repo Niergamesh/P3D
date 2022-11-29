@@ -6,7 +6,18 @@ using UnityEngine.InputSystem;
 public class PickUp : MonoBehaviour
 {
     [SerializeField] private Transform handTrasform;
+    [SerializeField] private Transform levelTransform;
     private PlayerInput playerInput;
+    private GameObject PickedUpObject;
+
+
+    private void Update()
+    {
+        if (playerInput.actions["Throw"].triggered)
+        {
+            ThrowBall();
+        }
+    }
 
     private void Start() 
     {
@@ -21,7 +32,16 @@ public class PickUp : MonoBehaviour
             pickUpObject.GetComponent<Rigidbody>().isKinematic = true;
             pickUpObject.transform.position = handTrasform.position; 
             pickUpObject.transform.SetParent(handTrasform);
+            PickedUpObject = pickUpObject;
             
         }
     }
+    private void ThrowBall()
+    {
+        PickedUpObject.GetComponent<Rigidbody>().useGravity = true;
+        PickedUpObject.GetComponent<Rigidbody>().isKinematic = false;
+        PickedUpObject.transform.SetParent(levelTransform);
+        PickedUpObject.GetComponent<Rigidbody>().AddForce(Vector3.back * 300);
+    }
+
 }
