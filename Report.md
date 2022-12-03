@@ -48,6 +48,10 @@ My scene demonstrates all the basic elements introduced throughout the lab, such
 ## References
 Below are all references used in my application and report.
 ### GitHub
+GitHub homepage: https://github.com/Niergamesh/P3D
+
+Application directory: https://github.com/Niergamesh/P3D/tree/main/My%20project/Assets/P3D
+
 ### Asset References
 [Ultimate 10+ Shaders](https://assetstore.unity.com/packages/vfx/shaders/ultimate-10-shaders-168611)
 
