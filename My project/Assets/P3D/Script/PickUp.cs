@@ -41,7 +41,7 @@ public class PickUp : MonoBehaviour
         PickedUpObject.GetComponent<Rigidbody>().useGravity = true;
         PickedUpObject.GetComponent<Rigidbody>().isKinematic = false;
         PickedUpObject.transform.SetParent(levelTransform);
-        PickedUpObject.GetComponent<Rigidbody>().AddForce(Vector3.back * 300);
+        PickedUpObject.GetComponent<Rigidbody>().AddForce(Vector3.forward * 300);
     }
 
 }
