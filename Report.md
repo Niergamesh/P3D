@@ -4,15 +4,10 @@ This is the report of 'Programing for 3D'
 
 ---
 ## Introduction
-My scene has a sci-fi landscape.I downloaded the material of the scene（Figure 1） and the character controller from Unity's asset story, and then made some modifications to the scene（Figure 2）, adding some animation and audio for opening the door.
+My scene has a sci-fi landscape.I downloaded the material of the scene and the character controller from Unity's asset story, and then made some modifications to the scene, adding some animation and audio for opening the door.
 
-![](./Screenshots/1.png)
-_Figure 1: Initial Scene
+Players will play an AI working in the building, their purpose is to throw the ball into the pit in the final room. When the number of balls in the pit reaches a certain amount, the game will win.
 
-![](./Screenshots/6.png)
-_Figure 2: After the change
-
-Players will play an AI working in the building, their purpose is to throw the ball into the pit in the final room. When the number of balls in the pit reaches a certain amount, the game will win
 ## Project Plan
 Below is a screenshot of the weekly schedule
 
@@ -38,6 +33,18 @@ _Figure 1: Week 8
 _Figure 1: Week 9
 
 ## Design
+Based on the original scene, I enlarged the hole in the end room so that it can fit a staircase and more balls. Players who accidentally fall into the hole can also climb up through the stairs.
+
+Then I added two automatically opened and closed doors at the passage to enrich the elements of the scene.
+
+Finally, I adjusted the overall lighting to make the room look darker, and set the light to blue to make the atmosphere deserted
+
+![](./Screenshots/1.png)
+_Figure 1: Initial Scene
+
+![](./Screenshots/6.png)
+_Figure 2: After the change
+
 ## Technical Element
 ## Script
 ## Unique Element
