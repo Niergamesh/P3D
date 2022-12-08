@@ -237,6 +237,8 @@ public class Point : MonoBehaviour
 
 ```
 ## Unique Element
+![](./Screenshots/14.png)
+_Figure 1: Door opening animation
 ## Summary
 My scene demonstrates all the basic elements introduced throughout the lab, such as lighting, materials and textures, 3D physics, modeling, scripting, animation, sound and particle systems. Also added a scoring system and UI to make it look more like a game. When the ball is thrown into the pit, the count will increase by 1. When the count reaches a certain value, the game will end.
 ## Future Work
