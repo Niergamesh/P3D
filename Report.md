@@ -47,6 +47,75 @@ _Figure 2: After the change
 
 ## Technical Element
 ## Script
+The following script is placed on the trigger of opening and closing the door to control the animation of opening and closing the door
+```c#
+using UnityEngine;
+
+public class Door_control : MonoBehaviour
+{
+    private Animator Door_Animator;
+    [SerializeField] private AudioSource a1;
+    [SerializeField] private AudioSource a2;
+    private void Start()
+    {
+        Door_Animator = gameObject.GetComponent<Animator>();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            OpenDoor();
+            a1.Play();
+        }
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            CloseDoor();
+            a2.Play();
+        }
+
+    }
+
+    private void OpenDoor()
+    {
+        Door_Animator.SetBool("open",true);
+    }
+
+    private void CloseDoor()
+    {
+        Door_Animator.SetBool("open", false);
+    }
+}
+```
+The following script is placed on the player controller to generate the ball
+```c#
+using System;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class Spawn : MonoBehaviour
+{
+    [SerializeField] private GameObject prefab;
+    private PlayerInput player_input;
+    private void Start()
+    {
+        player_input = GetComponent<PlayerInput>();
+    }
+
+
+    private void Update()
+    {
+        if (player_input.actions["Spawn"].triggered)
+        {
+            Instantiate(prefab, transform.position + transform.forward * 5+transform.up*2, Quaternion.identity);
+        }
+    }
+}
+ 
+```
 ## Unique Element
 ## Summary
 My scene demonstrates all the basic elements introduced throughout the lab, such as lighting, materials and textures, 3D physics, modeling, scripting, animation, sound and particle systems. Also added a scoring system and UI to make it look more like a game. When the ball is thrown into the pit, the count will increase by 1. When the count reaches a certain value, the game will end.
