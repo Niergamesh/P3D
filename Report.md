@@ -247,7 +247,7 @@ _Figure 1: Door opening animation
 ## Summary
 My scene demonstrates all the basic elements introduced throughout the lab, such as lighting, materials and textures, 3D physics, modeling, scripting, animation, sound and particle systems. Also added a scoring system and UI to make it look more like a game. When the ball is thrown into the pit, the count will increase by 1. When the count reaches a certain value, the game will end.
 ## Future Work
-
+I added a scoring function and UI. When the ball enters the hole in the end room, the score in the upper left corner will increase. There are instructions on the right side of the screen
 ## Appendix
 StarterAssetsInputs.cs
 ```c#
