@@ -46,6 +46,11 @@ _Figure 1: Initial Scene
 _Figure 2: After the change
 
 ## Technical Element
+For the stairs I added in the scene and my ball, I used imported materials (Ultimate 10+ Shaders) to make my factory look cooler. 
+For the lighting, I adjusted the lights in the scene to make the scene look deserted and more futuristic.
+I added custom animations to the doors on the road and added audio for the doors opening and closing.
+Players can spawn balls as well as pick up and throw balls using keys on the keyboard.
+
 ## Script
 The following script is placed on the trigger of opening and closing the door to control the animation of opening and closing the door
 ```c#
@@ -242,6 +247,7 @@ _Figure 1: Door opening animation
 ## Summary
 My scene demonstrates all the basic elements introduced throughout the lab, such as lighting, materials and textures, 3D physics, modeling, scripting, animation, sound and particle systems. Also added a scoring system and UI to make it look more like a game. When the ball is thrown into the pit, the count will increase by 1. When the count reaches a certain value, the game will end.
 ## Future Work
+
 ## Appendix
 StarterAssetsInputs.cs
 ```c#
